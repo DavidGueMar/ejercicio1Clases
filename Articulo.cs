@@ -64,7 +64,7 @@ namespace ejercicio1Clases
 
         public override string ToString()
         {
-            String texto = "Codigo del articulo: " + codigoArticulo +
+            String texto = "   *Codigo del articulo*: " + codigoArticulo +
                 "\n\nNombre del articulo: " + nombreArticulo +
                 "\n\nCategoria del articulo: " + categoriaArticulo +
                 "\n\nPrecio del articulo: " + precioArticulo +

@@ -46,7 +46,18 @@ namespace ejercicio1Clases
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.rtbListados = new System.Windows.Forms.RichTextBox();
+            this.gbAltas = new System.Windows.Forms.GroupBox();
+            this.btnAltas = new System.Windows.Forms.Button();
+            this.cboxCategoriaArticulo = new System.Windows.Forms.ComboBox();
+            this.txtExistenciasArticulo = new System.Windows.Forms.TextBox();
+            this.txtPrecioArticulo = new System.Windows.Forms.TextBox();
+            this.txtNombreArticulo = new System.Windows.Forms.TextBox();
+            this.lblExistenciasArticulo = new System.Windows.Forms.Label();
+            this.lblPrecioArticulo = new System.Windows.Forms.Label();
+            this.lblCategoriaArticulo = new System.Windows.Forms.Label();
+            this.lblNombreArticulo = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            this.gbAltas.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -104,14 +115,14 @@ namespace ejercicio1Clases
             // porNombreToolStripMenuItem
             // 
             this.porNombreToolStripMenuItem.Name = "porNombreToolStripMenuItem";
-            this.porNombreToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.porNombreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.porNombreToolStripMenuItem.Text = "Por nombre";
             this.porNombreToolStripMenuItem.Click += new System.EventHandler(this.porNombreToolStripMenuItem_Click);
             // 
             // porCodigoToolStripMenuItem
             // 
             this.porCodigoToolStripMenuItem.Name = "porCodigoToolStripMenuItem";
-            this.porCodigoToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.porCodigoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.porCodigoToolStripMenuItem.Text = "Por codigo";
             this.porCodigoToolStripMenuItem.Click += new System.EventHandler(this.porCodigoToolStripMenuItem_Click);
             // 
@@ -128,20 +139,20 @@ namespace ejercicio1Clases
             // todosToolStripMenuItem
             // 
             this.todosToolStripMenuItem.Name = "todosToolStripMenuItem";
-            this.todosToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.todosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.todosToolStripMenuItem.Text = "Todos";
             this.todosToolStripMenuItem.Click += new System.EventHandler(this.todosToolStripMenuItem_Click);
             // 
             // minimosToolStripMenuItem
             // 
             this.minimosToolStripMenuItem.Name = "minimosToolStripMenuItem";
-            this.minimosToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.minimosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.minimosToolStripMenuItem.Text = "Minimos ";
             // 
             // categoríaToolStripMenuItem
             // 
             this.categoríaToolStripMenuItem.Name = "categoríaToolStripMenuItem";
-            this.categoríaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.categoríaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.categoríaToolStripMenuItem.Text = "Categoría";
             // 
             // acercaDeToolStripMenuItem
@@ -163,12 +174,111 @@ namespace ejercicio1Clases
             this.rtbListados.TabIndex = 1;
             this.rtbListados.Text = "";
             // 
+            // gbAltas
+            // 
+            this.gbAltas.Controls.Add(this.btnAltas);
+            this.gbAltas.Controls.Add(this.cboxCategoriaArticulo);
+            this.gbAltas.Controls.Add(this.txtExistenciasArticulo);
+            this.gbAltas.Controls.Add(this.txtPrecioArticulo);
+            this.gbAltas.Controls.Add(this.txtNombreArticulo);
+            this.gbAltas.Controls.Add(this.lblExistenciasArticulo);
+            this.gbAltas.Controls.Add(this.lblPrecioArticulo);
+            this.gbAltas.Controls.Add(this.lblCategoriaArticulo);
+            this.gbAltas.Controls.Add(this.lblNombreArticulo);
+            this.gbAltas.Location = new System.Drawing.Point(226, 36);
+            this.gbAltas.Name = "gbAltas";
+            this.gbAltas.Size = new System.Drawing.Size(205, 208);
+            this.gbAltas.TabIndex = 2;
+            this.gbAltas.TabStop = false;
+            this.gbAltas.Text = "Altas";
+            // 
+            // btnAltas
+            // 
+            this.btnAltas.Location = new System.Drawing.Point(69, 163);
+            this.btnAltas.Name = "btnAltas";
+            this.btnAltas.Size = new System.Drawing.Size(75, 23);
+            this.btnAltas.TabIndex = 18;
+            this.btnAltas.Text = "Aceptar";
+            this.btnAltas.UseVisualStyleBackColor = true;
+            this.btnAltas.Click += new System.EventHandler(this.btnAltas_Click);
+            // 
+            // cboxCategoriaArticulo
+            // 
+            this.cboxCategoriaArticulo.FormattingEnabled = true;
+            this.cboxCategoriaArticulo.Items.AddRange(new object[] {
+            "Informatica",
+            "Imagen",
+            "Telefonia",
+            "Sonido"});
+            this.cboxCategoriaArticulo.Location = new System.Drawing.Point(69, 53);
+            this.cboxCategoriaArticulo.Name = "cboxCategoriaArticulo";
+            this.cboxCategoriaArticulo.Size = new System.Drawing.Size(121, 21);
+            this.cboxCategoriaArticulo.TabIndex = 17;
+            // 
+            // txtExistenciasArticulo
+            // 
+            this.txtExistenciasArticulo.Location = new System.Drawing.Point(69, 119);
+            this.txtExistenciasArticulo.Name = "txtExistenciasArticulo";
+            this.txtExistenciasArticulo.Size = new System.Drawing.Size(121, 20);
+            this.txtExistenciasArticulo.TabIndex = 16;
+            // 
+            // txtPrecioArticulo
+            // 
+            this.txtPrecioArticulo.Location = new System.Drawing.Point(69, 87);
+            this.txtPrecioArticulo.Name = "txtPrecioArticulo";
+            this.txtPrecioArticulo.Size = new System.Drawing.Size(121, 20);
+            this.txtPrecioArticulo.TabIndex = 15;
+            // 
+            // txtNombreArticulo
+            // 
+            this.txtNombreArticulo.Location = new System.Drawing.Point(69, 24);
+            this.txtNombreArticulo.Name = "txtNombreArticulo";
+            this.txtNombreArticulo.Size = new System.Drawing.Size(121, 20);
+            this.txtNombreArticulo.TabIndex = 14;
+            // 
+            // lblExistenciasArticulo
+            // 
+            this.lblExistenciasArticulo.AutoSize = true;
+            this.lblExistenciasArticulo.Location = new System.Drawing.Point(6, 126);
+            this.lblExistenciasArticulo.Name = "lblExistenciasArticulo";
+            this.lblExistenciasArticulo.Size = new System.Drawing.Size(63, 13);
+            this.lblExistenciasArticulo.TabIndex = 13;
+            this.lblExistenciasArticulo.Text = "Existencias:";
+            // 
+            // lblPrecioArticulo
+            // 
+            this.lblPrecioArticulo.AutoSize = true;
+            this.lblPrecioArticulo.Location = new System.Drawing.Point(6, 94);
+            this.lblPrecioArticulo.Name = "lblPrecioArticulo";
+            this.lblPrecioArticulo.Size = new System.Drawing.Size(40, 13);
+            this.lblPrecioArticulo.TabIndex = 12;
+            this.lblPrecioArticulo.Text = "Precio:";
+            // 
+            // lblCategoriaArticulo
+            // 
+            this.lblCategoriaArticulo.AutoSize = true;
+            this.lblCategoriaArticulo.Location = new System.Drawing.Point(6, 61);
+            this.lblCategoriaArticulo.Name = "lblCategoriaArticulo";
+            this.lblCategoriaArticulo.Size = new System.Drawing.Size(55, 13);
+            this.lblCategoriaArticulo.TabIndex = 11;
+            this.lblCategoriaArticulo.Text = "Categoria:";
+            // 
+            // lblNombreArticulo
+            // 
+            this.lblNombreArticulo.AutoSize = true;
+            this.lblNombreArticulo.Location = new System.Drawing.Point(6, 31);
+            this.lblNombreArticulo.Name = "lblNombreArticulo";
+            this.lblNombreArticulo.Size = new System.Drawing.Size(47, 13);
+            this.lblNombreArticulo.TabIndex = 10;
+            this.lblNombreArticulo.Text = "Nombre:";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(497, 434);
+            this.Controls.Add(this.gbAltas);
             this.Controls.Add(this.rtbListados);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -177,6 +287,8 @@ namespace ejercicio1Clases
             this.Load += new System.EventHandler(this.Menu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.gbAltas.ResumeLayout(false);
+            this.gbAltas.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,6 +312,16 @@ namespace ejercicio1Clases
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.RichTextBox rtbListados;
+        private System.Windows.Forms.GroupBox gbAltas;
+        private System.Windows.Forms.Button btnAltas;
+        private System.Windows.Forms.ComboBox cboxCategoriaArticulo;
+        private System.Windows.Forms.TextBox txtExistenciasArticulo;
+        private System.Windows.Forms.TextBox txtPrecioArticulo;
+        private System.Windows.Forms.TextBox txtNombreArticulo;
+        private System.Windows.Forms.Label lblExistenciasArticulo;
+        private System.Windows.Forms.Label lblPrecioArticulo;
+        private System.Windows.Forms.Label lblCategoriaArticulo;
+        private System.Windows.Forms.Label lblNombreArticulo;
     }
 }
 

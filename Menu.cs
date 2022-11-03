@@ -14,6 +14,7 @@ namespace ejercicio1Clases
     {
         Articulo articulo = new Articulo();
 
+        int contadorAltas = 0;
         public Menu()
         {
             InitializeComponent();
@@ -22,9 +23,8 @@ namespace ejercicio1Clases
 
         private void altasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Altas alta = new Altas();
-            alta.Show();
-            this.Hide();
+            gbAltas.Visible = true;
+
         }
 
 
@@ -46,32 +46,58 @@ namespace ejercicio1Clases
 
         private void Menu_Load(object sender, EventArgs e)
         {
-            Articulo articulo1 = new Articulo(1, "asus", "Informatica", 569.99, 5);
-            Articulo articulo2 = new Articulo(2, "hp", "Imagen", 569.99, 4);
-            Articulo articulo3 = new Articulo(3, "samsung", "Telefonia", 569.99, 5);
-            Articulo articulo4 = new Articulo(4, "sony", "Sonido", 569.99, 5);
+            rtbListados.Visible = false;
+            gbAltas.Visible = false;
+
+            
+           /* Articulo articulo1 = new Articulo(1, "asus", "Informatica", 569.99, 2);
+            Articulo articulo2 = new Articulo(2, "hp", "Imagen", 569.99, 3);
+            Articulo articulo3 = new Articulo(3, "samsung", "Telefonia", 569.99, 6);
+            Articulo articulo4 = new Articulo(4, "sony", "Sonido", 569.99, 20);
             Articulo.articulosList.Add(articulo1);
             Articulo.articulosList.Add(articulo2);
             Articulo.articulosList.Add(articulo3);
             Articulo.articulosList.Add(articulo4);
+           */
         }
 
         private void todosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             rtbListados.Clear();
-            //gbListados.Text = articulo1.ToString();
-            for (int i = 0; i < Articulo.articulosList.Count; i++)
-            {
-                rtbListados.Text += Articulo.articulosList[i].ToString();
+            rtbListados.Visible = true;
 
-            }
-
-            /*foreach (Articulo a in Articulo.articulosList)
+            foreach (Articulo a in Articulo.articulosList)
             {
                 rtbListados.Text += a.ToString();
 
 
-            }*/
+            }
+        }
+
+        private void btnAltas_Click(object sender, EventArgs e)
+        {
+            
+            contadorAltas++;
+
+            int codigoArticulo = contadorAltas;
+            string nombreArticulo = txtNombreArticulo.Text;
+            string categoriaArticulo = cboxCategoriaArticulo.Text;
+            double precioArticulo = double.Parse(txtPrecioArticulo.Text);
+            int existenciasArticulo = int.Parse(txtExistenciasArticulo.Text);
+
+            Articulo nuevoArticulo = new Articulo(codigoArticulo, nombreArticulo, categoriaArticulo, precioArticulo, existenciasArticulo);
+            Articulo.articulosList.Add(nuevoArticulo);
+            MessageBox.Show("Articulo añadido");
+
+
+            txtNombreArticulo.Text = "";
+            cboxCategoriaArticulo.Text = "";
+            txtPrecioArticulo.Text = "";
+            txtExistenciasArticulo.Text = "";
+            gbAltas.Visible = false;
+
+
+
         }
     }
 }

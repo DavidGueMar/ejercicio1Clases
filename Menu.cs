@@ -49,16 +49,16 @@ namespace ejercicio1Clases
             rtbListados.Visible = false;
             gbAltas.Visible = false;
 
-            
-           /* Articulo articulo1 = new Articulo(1, "asus", "Informatica", 569.99, 2);
-            Articulo articulo2 = new Articulo(2, "hp", "Imagen", 569.99, 3);
-            Articulo articulo3 = new Articulo(3, "samsung", "Telefonia", 569.99, 6);
-            Articulo articulo4 = new Articulo(4, "sony", "Sonido", 569.99, 20);
-            Articulo.articulosList.Add(articulo1);
-            Articulo.articulosList.Add(articulo2);
-            Articulo.articulosList.Add(articulo3);
-            Articulo.articulosList.Add(articulo4);
-           */
+
+            /* Articulo articulo1 = new Articulo(1, "asus", "Informatica", 569.99, 2);
+             Articulo articulo2 = new Articulo(2, "hp", "Imagen", 569.99, 3);
+             Articulo articulo3 = new Articulo(3, "samsung", "Telefonia", 569.99, 6);
+             Articulo articulo4 = new Articulo(4, "sony", "Sonido", 569.99, 20);
+             Articulo.articulosList.Add(articulo1);
+             Articulo.articulosList.Add(articulo2);
+             Articulo.articulosList.Add(articulo3);
+             Articulo.articulosList.Add(articulo4);
+            */
         }
 
         private void todosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -74,9 +74,21 @@ namespace ejercicio1Clases
             }
         }
 
+        private void minimosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rtbListados.Text = "";
+            foreach (Articulo a in Articulo.articulosList)
+            {
+                if (a.existenciasArticulo < 10)
+                {
+                    rtbListados.Text += a.ToString();
+                }
+            }
+        }
+
         private void btnAltas_Click(object sender, EventArgs e)
         {
-            
+
             contadorAltas++;
 
             int codigoArticulo = contadorAltas;
@@ -99,5 +111,7 @@ namespace ejercicio1Clases
 
 
         }
+
+
     }
 }

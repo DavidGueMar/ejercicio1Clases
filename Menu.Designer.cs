@@ -148,6 +148,7 @@ namespace ejercicio1Clases
             this.minimosToolStripMenuItem.Name = "minimosToolStripMenuItem";
             this.minimosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.minimosToolStripMenuItem.Text = "Minimos ";
+            this.minimosToolStripMenuItem.Click += new System.EventHandler(this.minimosToolStripMenuItem_Click);
             // 
             // categoríaToolStripMenuItem
             // 
